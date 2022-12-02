@@ -56,31 +56,6 @@ const Bikedetails = ({ singlebike, setBike }) => {
       });
   };
 
-  const handleReports = (data) => {
-    const report = {
-      MobileName: data.title,
-      Report: "Seller is fraud.",
-    };
-    console.log(report);
-
-    fetch("http://localhost:5000/reports", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(report),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.acknowledged) {
-          swal("Report has been submitted. Admin will send you a confirmation");
-        } else {
-          swal(data.message);
-        }
-      });
-  };
-
   return (
     <div>
       <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100">
@@ -110,6 +85,9 @@ const Bikedetails = ({ singlebike, setBike }) => {
             </h1>
             <h1>
               <span className="font-bold">Details:</span> {details}
+            </h1>
+            <h1>
+              <span className="font-bold">Seller Name:</span> {Seller_name}
             </h1>
             <h1>
               <span className="font-bold">Condition:</span> {condition}
@@ -145,12 +123,12 @@ const Bikedetails = ({ singlebike, setBike }) => {
             </h1>
           </div>
         </div>
-        <div className="grid justify-center grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+        <div className="grid justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
           {!isSeller && (
             <label
               disabled={singlebike.length === 0}
               htmlFor="booking-modal"
-              className="btn btn-accent text-white"
+              className="btn  btn-accent text-white"
               onClick={() => setBike(singlebike)}
             >
               Book{" "}
@@ -160,20 +138,10 @@ const Bikedetails = ({ singlebike, setBike }) => {
             <label
               disabled={singlebike.length === 0}
               htmlFor="booking-modal"
-              className="btn btn-accent ml-2 text-white"
+              className="btn  btn-accent   text-white"
               onClick={() => handleWish(singlebike)}
             >
-              Add To Wish{" "}
-            </label>
-          )}
-          {!isSeller && (
-            <label
-              disabled={singlebike.length === 0}
-              htmlFor="booking-modal"
-              className="btn btn-accent ml-2 text-white"
-              onClick={() => handleReports(singlebike)}
-            >
-              Report{" "}
+              Add To Wishlist{" "}
             </label>
           )}
         </div>

@@ -1,17 +1,13 @@
-import AllReports from "../DashBoard/Admin/AllReports";
 import AllUsers from "../DashBoard/Admin/AllUsers";
-import Dashboard from "../DashBoard/Dashboard_Layout/Dashboard";
 import Layout from "../DashBoard/Dashboard_Layout/Layout";
 import AddProduct from "../DashBoard/Seller/AddProduct";
 import MyProducts from "../DashBoard/Seller/MyProducts";
-
 import Orders from "../DashBoard/User/Orders";
 import WishList from "../DashBoard/User/WishList";
 import AdminRoute from "../Routes/Admin/AdminRoute";
 import PrivateRoute from "../Routes/PrivateRoute/PrivateRoute";
 import SellerRoute from "../Routes/SellerRoute/SellerRoute";
 import Bikes from "./BikeDetails/Bikes";
-
 import Blogs from "./Blogs";
 import ErrorPage from "./ErrorPage";
 import Login from "./Login";
@@ -81,7 +77,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/dashboard/myproducts",
+        path: "/dashboard/myproduct",
         element: (
           <SellerRoute>
             <MyProducts></MyProducts>
@@ -101,14 +97,6 @@ const router = createBrowserRouter([
         element: (
           <AdminRoute>
             <AllUsers></AllUsers>
-          </AdminRoute>
-        ),
-      },
-      {
-        path: "/dashboard/reports",
-        element: (
-          <AdminRoute>
-            <AllReports></AllReports>
           </AdminRoute>
         ),
       },

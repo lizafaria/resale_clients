@@ -22,7 +22,7 @@ const Layout = () => {
           <div className="drawer-side">
             <label htmlFor="dashboard" className="drawer-overlay"></label>
             <ul className="menu p-4 w-80 bg-base-100 text-base-content">
-              {!isSeller && (
+              {!isSeller && !isAdmin && (
                 <>
                   <li>
                     <Link className="text-2xl text-green-400" to={"/dashboard"}>
@@ -44,7 +44,7 @@ const Layout = () => {
                   <li>
                     <Link
                       className="text-2xl text-green-400"
-                      to={"/dashboard/users"}
+                      to={"/dashboard/allusers"}
                     >
                       All Users
                     </Link>
@@ -52,7 +52,7 @@ const Layout = () => {
                   <li>
                     <Link
                       className="text-2xl text-green-400"
-                      to={"/dashboard/report"}
+                      to={"/dashboard/reports"}
                     >
                       Report
                     </Link>
@@ -64,7 +64,7 @@ const Layout = () => {
                   <li>
                     <Link
                       className="text-2xl text-green-400"
-                      to={"/dashboard/addProduct"}
+                      to={"/dashboard/addproducts"}
                     >
                       Add Product
                     </Link>
@@ -72,17 +72,9 @@ const Layout = () => {
                   <li>
                     <Link
                       className="text-2xl text-green-400"
-                      to={"/dashboard/myProduct"}
+                      to={"/dashboard/myproduct"}
                     >
                       My Product
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-2xl text-green-400"
-                      to={"/dashboard/myBuyers"}
-                    >
-                      My Buyers
                     </Link>
                   </li>
                 </>
