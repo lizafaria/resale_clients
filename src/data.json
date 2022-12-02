@@ -15,8 +15,44 @@
       "Verified": "Verified",
       "condition": "Immaculate Condition",
       "number": "+9991122",
-      "order-id" : "1",
+      "order_id" : "1",
       "details": "It will be sold in BIKE in like new condition.And Test, Dhaka Showroom and BIKE.."
+    },
+    {
+      "category_id": "02",
+      "category_name": "Suzuki",
+      "title": "Suzuki GSX-R150",
+      "picture": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/black629dc8d562b15.webp",
+      "Address": "Jamuna, Dhaka",
+      "resale_price": "250,000",
+      "buying_price": "429,950",
+      "Year_purchase": "December, 2021",
+      "uses_year": "Almost 1 year",
+      "time": "08:20",
+      "Seller_name": "Suzuki_verified",
+      "Verified": "Verified",
+      "condition": "Immaculate Condition",
+      "number": "+0099922",
+      "order_id" : "6",
+      "details": "It will be sold in BIKE in like new condition.And Test, Dhaka Showroom and BIKE.."
+    },
+    {
+      "category_id": "03",
+      "category_name": "TVS",
+      "title": "TVS Ntorq 125",
+      "picture": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/1619602977_12_549191.jpeg",
+      "Address": "Uttara, Dhaka",
+      "resale_price": "125,000",
+      "buying_price": "189,900",
+      "Year_purchase": "August, 2022",
+      "uses_year": "Almost 4 Month",
+      "time": "09:00",
+      "Seller_name": "TVS_verified",
+      "Verified": "Verified",
+      "condition": "Excellent Condition",
+      "number": "+92211122",
+      "order_id" : "10",
+      "details": "It will be sold in BIKE in like new condition.And Test, Dhaka Showroom and BIKE."
     },
     {
       "category_id": "01",
@@ -33,7 +69,7 @@
       "Verified": "Verified",
       "condition": "Immaculate Condition",
       "number": "+9991122",
-      "order-id" : "2",
+      "order_id" : "2",
       "details": "It will be sold in BIKE in like new condition.And Test, Dhaka Showroom and BIKE."
     },
     {
@@ -51,7 +87,7 @@
       "Verified": "Verified",
       "condition": "Immaculate Condition",
       "number": "+9991122",
-      "order-id" : "3",
+      "order_id" : "3",
       "details": "It will be sold in BIKE in like new condition.And Test, Dhaka Showroom and BIKE.."
     },
     {
@@ -69,7 +105,7 @@
       "Verified": "Verified",
       "condition": "Immaculate Condition",
       "number": "+9988122",
-      "order-id" : "4",
+      "order_id" : "4",
       "details": "It will be sold in BIKE in like new condition.And Test, Dhaka Showroom and BIKE.."
     },
     {
@@ -87,27 +123,10 @@
       "Verified": "Verified",
       "condition": "Immaculate Condition",
       "number": "+9991122",
-      "order-id" : "5",
+      "order_id" : "5",
       "details": "It will be sold in BIKE in like new condition.And Test, Dhaka Showroom and BIKE."
     },
-    {
-      "category_id": "02",
-      "category_name": "Suzuki",
-      "title": "Suzuki GSX-R150",
-      "picture": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/black629dc8d562b15.webp",
-      "Address": "Jamuna, Dhaka",
-      "resale_price": "250,000",
-      "buying_price": "429,950",
-      "Year_purchase": "December, 2021",
-      "uses_year": "Almost 1 year",
-      "time": "08:20",
-      "Seller_name": "Suzuki_verified",
-      "Verified": "Verified",
-      "condition": "Immaculate Condition",
-      "number": "+0099922",
-      "order-id" : "6",
-      "details": "It will be sold in BIKE in like new condition.And Test, Dhaka Showroom and BIKE.."
-    },
+    
     {
       "category_id": "02",
       "category_name": "Suzuki",
@@ -123,7 +142,7 @@
       "Verified": "Verified",
       "condition": "Immaculate Condition",
       "number": "+0099922",
-      "order-id" : "7",
+      "order_id" : "7",
       "details": "It will be sold in BIKE in like new condition.And Test, Dhaka Showroom and BIKE."
     },
     {
@@ -141,7 +160,7 @@
       "Verified": "Verified",
       "condition": "Immaculate Condition",
       "number": "+0099922",
-      "order-id" : "8",
+      "order_id" : "8",
       "details": "It will be sold in BIKE in like new condition.And Test, Dhaka Showroom and BIKE.."
     },
     {
@@ -159,27 +178,10 @@
       "Verified": "Verified",
       "condition": "Immaculate Condition",
       "number": "+33445566",
-      "order-id" : "9",
+      "order_id" : "9",
       "details": "It will be sold in BIKE in like new condition.And Test, Dhaka Showroom and BIKE."
     },
-    {
-      "category_id": "03",
-      "category_name": "TVS",
-      "title": "TVS Ntorq 125",
-      "picture": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/1619602977_12_549191.jpeg",
-      "Address": "Uttara, Dhaka",
-      "resale_price": "125,000",
-      "buying_price": "189,900",
-      "Year_purchase": "August, 2022",
-      "uses_year": "Almost 4 Month",
-      "time": "09:00",
-      "Seller_name": "TVS_verified",
-      "Verified": "Verified",
-      "condition": "Excellent Condition",
-      "number": "+92211122",
-      "order-id" : "10",
-      "details": "It will be sold in BIKE in like new condition.And Test, Dhaka Showroom and BIKE."
-    },
+    
     {
       "category_id": "03",
       "category_name": "TVS",
@@ -195,7 +197,7 @@
       "Verified": "Verified",
       "condition": "Excellent Condition",
       "number": "+92211122",
-      "order-id" : "11",
+      "order_id" : "11",
       "details": "It will be sold in BIKE in like new condition.And Test, Dhaka Showroom and BIKE."
     },
     {
@@ -213,7 +215,7 @@
       "Verified": "Verified",
       "condition": "Excellent Condition",
       "number": "+92271122",
-      "order-id" : "12",
+      "order_id" : "12",
       "details": "It will be sold in BIKE in like new condition.And Test, Dhaka Showroom and BIKE."
     },
     {
@@ -231,7 +233,7 @@
       "Verified": "Verified",
       "condition": "Immaculate Condition",
       "number": "+9991122",
-      "order-id" : "13",
+      "order_id" : "13",
       "details": "It will be sold in BIKE in like new condition.And Test, Dhaka Showroom and BIKE."
     }
     

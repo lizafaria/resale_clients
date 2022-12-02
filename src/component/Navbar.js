@@ -1,35 +1,52 @@
-import React, { useContext } from 'react';
-import {Link} from "react-router-dom";
-import swal from 'sweetalert';
-import { Authcontext } from './Context/AuthProvider';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import swal from "sweetalert";
+import { Authcontext } from "./Context/AuthProvider";
 
 const Navbar = () => {
-   const {user,logout} = useContext(Authcontext);
+  const { user, logout } = useContext(Authcontext);
 
-   const handleLogout = () =>{
+  const handleLogout = () => {
     logout()
-    .then(swal("User Logged Out"))
-    .catch((error)=>swal(error.message));
-   };
+      .then(swal("User Logged Out"))
+      .catch((error) => swal(error.message));
+  };
 
-   const menuItems =(
+  const menuItems = (
     <>
+      <li>
+        <Link to="/" className="text-2xl text-green-400">
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link to="/blogs" className="text-2xl text-green-400">
+          Blogs
+        </Link>
+      </li>
+      {user?.uid ? (
+        <>
+          <li>
+            <Link to="/dashboard" className="text-2xl text-green-400">
+              Dashboard
+            </Link>
+          </li>
+          <li>
+            <button className="text-2xl text-green-400" onClick={handleLogout}>
+              Sign Out
+            </button>
+          </li>
+        </>
+      ) : (
         <li>
-           <Link to ="/">Home</Link>
+          <Link to="/login" className="text-2xl text-green-400">
+            Login
+          </Link>
         </li>
-        <li><Link to="/about">About</Link></li>
-        {user?.uid ? (
-            <>
-            <li><Link to="/dashboard">Dashboard</Link></li>
-            <li><button onClick={handleLogout}>Sign Out</button></li>
-            </>
-        ) : (
-            <li><Link to="/login">Login</Link></li>
-        )
-}
+      )}
     </>
-   );
-   return (
+  );
+  return (
     <div className="navbar bg-base-100 flex justify-between">
       <div className="navbar-start">
         <div className="dropdown">
@@ -56,18 +73,17 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost normal-case text-xl">
-          Doctors Portal
+        <Link
+          to="/"
+          className="btn btn-ghost normal-case text-5xl font-bold text-green-400"
+        >
+          Bike Mart
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal p-0">{menuItems}</ul>
+        <ul className="menu  menu-horizontal p-0">{menuItems}</ul>
       </div>
-      <label
-        htmlFor="dashboard-drawer"
-        tabIndex={2}
-        className="btn btn-ghost lg:hidden"
-      >
+      <label htmlFor="dashboard" tabIndex={2} className="btn btn-ghost ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
