@@ -38,7 +38,7 @@ const Bikedetails = ({ singlebike, setBike }) => {
       picture: data.picture,
     };
 
-    fetch("http://localhost:5000/wishlist", {
+    fetch("https://bike-mart-server-rouge.vercel.app/wishlist", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -131,14 +131,14 @@ const Bikedetails = ({ singlebike, setBike }) => {
               className="btn  btn-accent text-white"
               onClick={() => setBike(singlebike)}
             >
-              Book{" "}
+              Order{" "}
             </label>
           )}
           {!isSeller && (
             <label
               disabled={singlebike.length === 0}
               htmlFor="booking-modal"
-              className="btn  btn-accent   text-white"
+              className="btn  btn-accent ml-2  text-white"
               onClick={() => handleWish(singlebike)}
             >
               Add To Wishlist{" "}

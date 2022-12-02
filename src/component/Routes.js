@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       {
         path: "/bikes/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/bikes/${params.id}`),
+          fetch(`https://bike-mart-server-rouge.vercel.app/bikes/${params.id}`),
         element: (
           <PrivateRoute>
             <Bikes></Bikes>

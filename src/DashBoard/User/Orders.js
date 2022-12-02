@@ -5,7 +5,7 @@ import { Authcontext } from "../../component/Context/AuthProvider";
 
 const Orders = () => {
   const { user } = useContext(Authcontext);
-  const url = `http://localhost:5000/orders?email=${user?.email}`;
+  const url = `https://bike-mart-server-rouge.vercel.app/orders?email=${user?.email}`;
   const { data: orders = [], isLoading } = useQuery({
     queryKey: ["orders", user?.email],
     queryFn: async () => {
@@ -53,7 +53,7 @@ const Orders = () => {
                   <td>{order.price}</td>
                   <td>
                     {order.price && !order.paid && (
-                      <Link to={`/dashboard/payment/${order._id}`}>
+                      <Link>
                         <button className="btn btn-primary btn-xs">Pay</button>
                       </Link>
                     )}

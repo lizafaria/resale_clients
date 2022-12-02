@@ -7,7 +7,7 @@ import swal from "sweetalert";
 
 const WishList = () => {
   const { user } = useContext(Authcontext);
-  const URL = `http://localhost:5000/wishlist?email=${user?.email}`;
+  const URL = `https://bike-mart-server-rouge.vercel.app/wishlist?email=${user?.email}`;
   const [wishlist, setWishlist] = React.useState(null);
   const [wish, setWish] = useState("");
 
@@ -22,7 +22,7 @@ const WishList = () => {
   const handleOrder = (data) => {
     console.log(data);
 
-    fetch("http://localhost:5000/orders", {
+    fetch("https://bike-mart-server-rouge.vercel.app/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

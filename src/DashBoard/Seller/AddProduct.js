@@ -59,7 +59,7 @@ const AddProduct = () => {
             email: user.email,
           };
 
-          fetch("http://localhost:5000/sellerbikes", {
+          fetch("https://bike-mart-server-rouge.vercel.app/sellerbikes", {
             method: "POST",
             headers: {
               "content-type": "application/json",

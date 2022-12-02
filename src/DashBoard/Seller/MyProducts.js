@@ -5,7 +5,7 @@ import { Authcontext } from "../../component/Context/AuthProvider";
 
 const MyProducts = () => {
   const { user } = useContext(Authcontext);
-  const url = `http://localhost:5000/sellersaddedBike?email=${user?.email}`;
+  const url = `https://bike-mart-server-rouge.vercel.app/sellersaddedBike?email=${user?.email}`;
   const { data: bikes = [], refetch } = useQuery({
     queryKey: ["bikes", user?.email],
     queryFn: async () => {
@@ -21,12 +21,15 @@ const MyProducts = () => {
   });
   console.log(bikes);
   const handleDelete = (data) => {
-    fetch(`http://localhost:5000/sellersaddedBike/${data}`, {
-      method: "DELETE",
-      headers: {
-        authorization: `bearer ${localStorage.getItem("accessToken")}`,
-      },
-    })
+    fetch(
+      `https://bike-mart-server-rouge.vercel.app/sellersaddedBike/${data}`,
+      {
+        method: "DELETE",
+        headers: {
+          authorization: `bearer ${localStorage.getItem("accessToken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -37,7 +40,7 @@ const MyProducts = () => {
       });
   };
   const handleAd = (data) => {
-    fetch("http://localhost:5000/ad", {
+    fetch("https://bike-mart-server-rouge.vercel.app/ad", {
       method: "POST",
       headers: {
         "content-type": "application/json",

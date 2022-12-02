@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
+import useTokens from "../UseHooks/UseTokens/UseTokens";
 import { Authcontext } from "./Context/AuthProvider";
 
 const Register = () => {
@@ -14,12 +15,12 @@ const Register = () => {
     useContext(Authcontext);
   const [signUpError, setSignUPError] = useState("");
   const navigate = useNavigate();
-  // const [cratedUseremail,setCratedUseremail ]= useState('')
-  // const [token ] = useToken(cratedUseremail)
+  const [cratedUseremail, setCratedUseremail] = useState("");
+  const [token] = useTokens(cratedUseremail);
 
-  // if(token){
-  //     navigate('/')
-  // }
+  if (token) {
+    navigate("/");
+  }
 
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
@@ -49,7 +50,7 @@ const Register = () => {
 
   const savedUser = (name, email, role) => {
     const user = { name, email, role };
-    fetch("http://localhost:5000/allusers", {
+    fetch("https://bike-mart-server-rouge.vercel.app/allusers", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -59,7 +60,7 @@ const Register = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        // setCratedUseremail(email);
+        setCratedUseremail(email);
       });
   };
 

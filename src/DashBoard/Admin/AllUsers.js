@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 import swal from "sweetalert";
 
 const AllUsers = () => {
-  const URL = `http://localhost:5000/users`;
+  const URL = `https://bike-mart-server-rouge.vercel.app/users`;
   const { data: allUsers = [], refetch } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
@@ -20,7 +20,7 @@ const AllUsers = () => {
   });
   const handleDelete = (user) => {
     console.log(user);
-    fetch(`http://localhost:5000/users/${user}`, {
+    fetch(`https://bike-mart-server-rouge.vercel.app/users/${user}`, {
       method: "DELETE",
       headers: {
         authorization: `bearer ${localStorage.getItem("accessToken")}`,

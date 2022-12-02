@@ -6,7 +6,9 @@ const Category = () => {
   const { data: bikes = [], refetch } = useQuery({
     queryKey: ["bikes"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/bikes");
+      const res = await fetch(
+        "https://bike-mart-server-rouge.vercel.app/bikes"
+      );
       const data = await res.json();
       return data.slice(0, 3);
     },

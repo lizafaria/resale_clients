@@ -3,11 +3,14 @@ import React from "react";
 const Trusted = () => {
   return (
     <div>
+      <div className="App">
+        <h1 className="text-5xl font-bold">It's All About Bikes</h1>
+      </div>
       <section className="p-4 lg:p-8 text-gray-100">
         <div className="container mx-auto space-y-12">
           <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
             <img
-              src="https://source.unsplash.com/640x480/?3"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrQuP9pT5dFnY7T9zfOBiYK0bpA1X9yomO2g&usqp=CAU"
               alt=""
               className="h-80 bg-gray-500 aspect-video"
             />
@@ -28,7 +31,7 @@ const Trusted = () => {
           </div>
           <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse">
             <img
-              src="https://source.unsplash.com/640x480/?2"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwCJhNSRo8Ys90WZ5MnOdd46FsKPz6v-GAg&usqp=CAU"
               alt=""
               className="h-80 bg-gray-500 aspect-video"
             />

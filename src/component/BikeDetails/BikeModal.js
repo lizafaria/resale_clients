@@ -26,7 +26,7 @@ const BikeModal = ({ bike, setBike }) => {
       picture,
     };
 
-    fetch("http://localhost:5000/orders", {
+    fetch("https://bike-mart-server-rouge.vercel.app/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",
